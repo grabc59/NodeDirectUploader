@@ -13,7 +13,7 @@
  */
 const express = require('express');
 const aws = require('aws-sdk');
-
+require('dotenv').config();
 /*
  * Set-up and run the Express app.
  */
@@ -27,7 +27,6 @@ app.listen(process.env.PORT || 3000);
  * Load the S3 information from the environment variables.
  */
 const S3_BUCKET = process.env.S3_BUCKET;
-
 /*
  * Respond to GET requests to /account.
  * Upon request, render the 'account.html' web page in views/ directory.
